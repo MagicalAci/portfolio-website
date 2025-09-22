@@ -32,7 +32,15 @@ Thumbs.db
 
 # Logs
 *.log
+logs/*.log
+logs/*.log.bak
+
+# Deployment files
+deployment/
 
 # Temporary files
 *.tmp
 *.temp
+
+# Vercel
+.vercel
