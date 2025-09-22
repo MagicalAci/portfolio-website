@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>于鹤炜 | AI产品经理 | 个人网站</title>
+    <meta name="description" content="于鹤炜 - 4年AI产品经验，主导千万级营收产品矩阵，专注AI技术商业化">
+    <meta name="keywords" content="于鹤炜,AI产品经理,LLM,Agent编排,Stable Diffusion,AI商业化">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMwMGZmY2MiLz4KPHRLEEFUIGZPQ1VSRVA8L3BhdGg+Cjwvc3ZnPgo=">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="matrix-background" id="matrixBackground"></div>
+        <div class="loader-content">
+            <div class="loader-logo">YU.HEWEI</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">初始化AI系统...</p>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <div class="aurora"></div>
+    <div class="cyber-grid"></div>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">YU.HEWEI</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我</a></li>
+                <li><a href="#skills" class="nav-link">技能</a></li>
+                <li><a href="#experience" class="nav-link">经历</a></li>
+                <li><a href="#projects" class="nav-link">项目</a></li>
+                <li><a href="#education" class="nav-link">教育</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">🚀 READY FOR NEXT CHALLENGE</div>
+                <h1 class="hero-title">
+                    <span>Hi, I'm</span>
+                    <span class="gradient-text">于鹤炜</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text">AI Product Architect</span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    4年深耕AI产品领域，主导千万级营收产品矩阵。
+                    擅长将前沿AI技术转化为商业价值，以创始人心态打造每一个产品。
+                    用技术创新驱动业务增长，重新定义AI产品的可能性。
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-glow">
+                        <i class="fas fa-rocket"></i> 查看项目
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-message"></i> 联系我
+                    </a>
+                    <button class="btn btn-download" onclick="downloadResume()">
+                        <i class="fas fa-file-pdf"></i> 下载PDF简历
+                    </button>
+                </div>
+                <div class="stats-dashboard">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-value" data-value="1000">0</div>
+                        <div class="stat-unit">万+</div>
+                        <div class="stat-label">累计营收</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <div class="stat-value" data-value="650">0</div>
+                        <div class="stat-unit">万+</div>
+                        <div class="stat-label">年度节省成本</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="stat-value" data-value="300">0</div>
+                        <div class="stat-unit">%</div>
+                        <div class="stat-label">效率提升</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-value" data-value="18">0</div>
+                        <div class="stat-unit">个</div>
+                        <div class="stat-label">岗位自动化</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-display">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <div class="code-dot dot-red"></div>
+                            <div class="code-dot dot-yellow"></div>
+                            <div class="code-dot dot-green"></div>
+                        </div>
+                        <span class="code-title">ai-product-manager.js</span>
+                    </div>
+                    <div class="code-body">
+                        <div class="code-line" data-line="1">
+                            <span class="code-keyword">const</span>
+                            <span class="code-function">aiProductManager</span> = {
+                        </div>
+                        <div class="code-line" data-line="2">
+                            &nbsp;&nbsp;<span class="code-property">name</span>:
+                            <span class="code-string">'于鹤炜'</span>,
+                        </div>
+                        <div class="code-line" data-line="3">
+                            &nbsp;&nbsp;<span class="code-property">experience</span>:
+                            <span class="code-string">'4 years'</span>,
+                        </div>
+                        <div class="code-line" data-line="4">
+                            &nbsp;&nbsp;<span class="code-property">skills</span>: [
+                        </div>
+                        <div class="code-line" data-line="5">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'LLM Fine-tuning'</span>,
+                        </div>
+                        <div class="code-line" data-line="6">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Agent Orchestration'</span>,
+                        </div>
+                        <div class="code-line" data-line="7">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'Stable Diffusion'</span>,
+                        </div>
+                        <div class="code-line" data-line="8">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">'商业化运营'</span>,
+                        </div>
+                        <div class="code-line" data-line="9">
+                            &nbsp;&nbsp;],
+                        </div>
+                        <div class="code-line" data-line="10">
+                            &nbsp;&nbsp;<span class="code-property">achievements</span>: {
+                        </div>
+                        <div class="code-line" data-line="11">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-property">revenue</span>:
+                            <span class="code-string">'1000万+'</span>,
+                        </div>
+                        <div class="code-line" data-line="12">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-property">efficiency</span>:
+                            <span class="code-string">'+300%'</span>,
+                        </div>
+                        <div class="code-line" data-line="13">
+                            &nbsp;&nbsp;}
+                        </div>
+                        <div class="code-line" data-line="14">
+                            };
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">ABOUT ME</span>
+                <h2 class="section-title">创新驱动的AI产品架构师</h2>
+                <p class="section-subtitle">将技术创新与商业价值完美融合，打造行业领先的AI产品</p>
+            </div>
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <h3>全栈AI技术专家，卓越商业化领袖</h3>
+                            <p>
+                                4年深耕AI产品领域，我将前沿技术与商业价值完美融合。从LLM微调到Agent编排，
+                                从Stable Diffusion到向量数据库，我不仅掌握核心技术，更能将其转化为实际的商业价值。
+                            </p>
+                        </div>
+
+                        <div class="expertise-areas">
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="expertise-content">
+                                    <h4>全栈AI技术专家</h4>
+                                    <p>深度掌握多模态AI技术栈：LLM微调与Agent编排、Stable Diffusion/Midjourney图像生成、向量数据库、推荐算法。熟练运用AI Coding/coze等平台快速搭建产品Demo。</p>
+                                </div>
+                            </div>
+
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="expertise-content">
+                                    <h4>卓越商业化成绩</h4>
+                                    <p>主导产品矩阵累计营收超千万。降AIGC痕迹功能充值率40%（行业Top1），论文产品客单价提升125%，AI小说日均充值率6%。擅长0→1商业模式设计与快速验证。</p>
+                                </div>
+                            </div>
+
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="expertise-content">
+                                    <h4>内部创新领袖</h4>
+                                    <p>独立主导搭建AI业务中台自动化流程，实现年度成本预计节省650万+，整体运营成本降低60%。18个岗位实现自动化，核心业务效率提升300%。</p>
+                                </div>
+                            </div>
+
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="expertise-content">
+                                    <h4>产品创新先锋</h4>
+                                    <p>主导6大AI产品线，落地20+创新功能，覆盖文本生成、语音识别、图像创作、智能搜索、流程自动化等全AI应用场景。平均2个月完成创新验证到规模化落地。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-info">
+                        <div class="personal-info">
+                            <h4>基本信息</h4>
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <span class="info-label">姓名</span>
+                                    <span class="info-value">于鹤炜</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">年龄</span>
+                                    <span class="info-value">24岁</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">性别</span>
+                                    <span class="info-value">男</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">电话</span>
+                                    <span class="info-value">18931212098</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">邮箱</span>
+                                    <span class="info-value">magicalaci@gmail.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">期望城市</span>
+                                    <span class="info-value">上海</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">期望薪资</span>
+                                    <span class="info-value">25-35K</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="leadership-traits">
+                            <h4>复合型领导力</h4>
+                            <div class="trait-grid">
+                                <div class="trait-item">
+                                    <div class="trait-icon">👥</div>
+                                    <div class="trait-text">
+                                        <strong>管理能力</strong>
+                                        <p>统筹20+人团队，建立3大管理体系</p>
+                                    </div>
+                                </div>
+                                <div class="trait-item">
+                                    <div class="trait-icon">💡</div>
+                                    <div class="trait-text">
+                                        <strong>商业嗅觉</strong>
+                                        <p>每个产品均实现正向现金流，ROI均超300%</p>
+                                    </div>
+                                </div>
+                                <div class="trait-item">
+                                    <div class="trait-icon">⚡</div>
+                                    <div class="trait-text">
+                                        <strong>执行效率</strong>
+                                        <p>平均2月完成0→1上线，最快2周商业化重构</p>
+                                    </div>
+                                </div>
+                                <div class="trait-item">
+                                    <div class="trait-icon">🚀</div>
+                                    <div class="trait-text">
+                                        <strong>创业精神</strong>
+                                        <p>创始人心态，不设边界、结果导向</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">SKILLS</span>
+                <h2 class="section-title">技术栈全景图</h2>
+                <p class="section-subtitle">深度掌握AI全栈技术，融合产品思维与商业洞察</p>
+            </div>
+            <div class="skills-compact">
+                <div class="skill-major-category">
+                    <h3 class="major-title">
+                        <i class="fas fa-brain"></i>
+                        多模态AIGC构建能力
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-item-compact">LLM微调与Agent编排</span>
+                        <span class="skill-item-compact">Stable Diffusion/Midjourney</span>
+                        <span class="skill-item-compact">向量数据库</span>
+                        <span class="skill-item-compact">推荐算法</span>
+                        <span class="skill-item-compact">AI Coding/Coze平台</span>
+                        <span class="skill-item-compact">Dify平台架构</span>
+                        <span class="skill-item-compact">图像处理系统</span>
+                        <span class="skill-item-compact">AI爬虫系统</span>
+                    </div>
+                </div>
+
+                <div class="skill-major-category">
+                    <h3 class="major-title">
+                        <i class="fas fa-chart-line"></i>
+                        商业化能力
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-item-compact">0→1商业模式设计</span>
+                        <span class="skill-item-compact">数据驱动优化</span>
+                        <span class="skill-item-compact">产品策略与规划</span>
+                        <span class="skill-item-compact">市场需求分析</span>
+                        <span class="skill-item-compact">用户体验设计</span>
+                        <span class="skill-item-compact">ROI超300%</span>
+                    </div>
+                </div>
+
+                <div class="skill-major-category">
+                    <h3 class="major-title">
+                        <i class="fas fa-users"></i>
+                        管理能力
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-item-compact">统筹20+人团队</span>
+                        <span class="skill-item-compact">产研协作体系</span>
+                        <span class="skill-item-compact">敏捷开发</span>
+                        <span class="skill-item-compact">项目管理</span>
+                        <span class="skill-item-compact">体系建设</span>
+                        <span class="skill-item-compact">跨部门沟通</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">EXPERIENCE</span>
+                <h2 class="section-title">职业历程</h2>
+                <p class="section-subtitle">从技术创新到商业落地的实践之路</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>WikiFX外汇交易平台</h3>
+                            <span class="timeline-period">2025.07 - 至今</span>
+                        </div>
+                        <div class="timeline-role">AI业务负责人</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>智能翻译系统：成本降低95%（60万→5万/年）</li>
+                                <li>文章自动化：人力需求3人→0.5人，效率↑300%</li>
+                                <li>年度节省成本650万+，整体运营成本↓60%</li>
+                                <li>18个岗位实现自动化，错误率控制在5%以内</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-achievements">
+                            <span class="achievement-tag">年度节省成本650万+</span>
+                            <span class="achievement-tag">运营成本降低60%</span>
+                            <span class="achievement-tag">18个岗位自动化</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>上海韩创网络科技</h3>
+                            <span class="timeline-period">2025.03 - 2025.06</span>
+                        </div>
+                        <div class="timeline-role">AI产品经理</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>笔灵AI论文：降AIGC痕迹充值率40%（行业Top1）</li>
+                                <li>论文产品客单价提升125%（40→90元）</li>
+                                <li>AI小说：2月内从0到1，日均充值率6%</li>
+                                <li>听脑AI：客单价↑30%，受限充值率↑20%</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-achievements">
+                            <span class="achievement-tag">降AIGC痕迹充值率40%</span>
+                            <span class="achievement-tag">论文客单价提升125%</span>
+                            <span class="achievement-tag">小说日均充值率6%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>上海确识数字科技</h3>
+                            <span class="timeline-period">2022.09 - 2024.04</span>
+                        </div>
+                        <div class="timeline-role">AI产品经理</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>AI图文模型：付费率达5%，用户次日留存↑30%</li>
+                                <li>0投放预算引流10万用户至Tiamat官网</li>
+                                <li>完成保时捷汽车AI品宣网站等多个B端合作</li>
+                                <li>构建自适应用户审美偏好的图文模型系统</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-achievements">
+                            <span class="achievement-tag">付费率达5%</span>
+                            <span class="achievement-tag">次日留存↑30%</span>
+                            <span class="achievement-tag">成功引流10万用户</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">PROJECTS</span>
+                <h2 class="section-title">核心项目展示</h2>
+                <p class="section-subtitle">将创新想法转化为商业价值</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-visual">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI业务中台自动化系统</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI Coding</span>
+                            <span class="tech-tag">Multi-Agent</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                        <p class="project-description">
+                            构建端到端的AI自动化系统，基于AI Coding搭建批处理流程，
+                            实现从现场照片处理到报告生成的全流程自动化。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <span class="metric-value">650万+</span>
+                                <span class="metric-label">年度节省</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">300%</span>
+                                <span class="metric-label">效率提升</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">18个</span>
+                                <span class="metric-label">自动化岗位</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-visual">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">笔灵AI论文平台</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">Agent</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <p class="project-description">
+                            覆盖论文撰写、降重、降AI痕迹等全场景，深度调研用户需求，
+                            设计差异化功能模块，构建完整AI写作解决方案。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">充值率</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">125%</span>
+                                <span class="metric-label">客单价提升</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">#1</span>
+                                <span class="metric-label">行业排名</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-visual">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI小说创作平台</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Dify</span>
+                            <span class="tech-tag">Prompt</span>
+                            <span class="tech-tag">Vector DB</span>
+                        </div>
+                        <p class="project-description">
+                            从0到1构建AI小说生成平台，设计Prompt模板体系，
+                            通过dify搭建agent流程，2月内实现15个核心模块上线。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <span class="metric-value">2月</span>
+                                <span class="metric-label">快速上线</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">6%</span>
+                                <span class="metric-label">日充值率</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">15个</span>
+                                <span class="metric-label">核心模块</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-visual">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tiamat AI绘画平台</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Stable Diffusion</span>
+                            <span class="tech-tag">ControlNet</span>
+                            <span class="tech-tag">模型训练</span>
+                        </div>
+                        <p class="project-description">
+                            面向C端用户的AI绘画模型，包括文生图、图生图、ControlNet等功能。
+                            构建自适应匹配用户审美偏好的图文模型。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <span class="metric-value">500%</span>
+                                <span class="metric-label">使用峰值增长</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">30%</span>
+                                <span class="metric-label">留存提升</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">4%</span>
+                                <span class="metric-label">付费率</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-visual">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">听脑AI录音转写</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">语音识别</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">智能分析</span>
+                        </div>
+                        <p class="project-description">
+                            AI录音转写APP，基于用户录音文件智能识别类型，
+                            构建纪要、代办、数据分析等差异化功能模块。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <span class="metric-value">30%</span>
+                                <span class="metric-label">客单价提升</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">20%</span>
+                                <span class="metric-label">受限充值率提升</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">2周</span>
+                                <span class="metric-label">重构周期</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-visual">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI搜索平台</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">意图识别</span>
+                            <span class="tech-tag">搜索引擎</span>
+                            <span class="tech-tag">多维分析</span>
+                        </div>
+                        <p class="project-description">
+                            独立完成意图识别→维度分析→搜索逻辑全链路架构设计，
+                            对标淘宝/京东搜索体验，三期路线图已获批。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <span class="metric-value">3期</span>
+                                <span class="metric-label">路线图获批</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">全链路</span>
+                                <span class="metric-label">架构设计</span>
+                            </div>
+                            <div class="project-metric">
+                                <span class="metric-value">Top级</span>
+                                <span class="metric-label">对标体验</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">EDUCATION</span>
+                <h2 class="section-title">教育背景</h2>
+                <p class="section-subtitle">扎实的工程基础与创新实践</p>
+            </div>
+            <div class="education-content">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>常熟理工学院</h3>
+                        <div class="education-meta">
+                            <span class="degree">本科 | 机械工程</span>
+                            <span class="period">2019.09 - 2023.06</span>
+                        </div>
+                        <div class="education-achievements">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">🏆</div>
+                                <div class="achievement-text">
+                                    <strong>Robot Master机甲大师团队视觉组组长</strong>
+                                    <p>项目管理负责人，获视觉组三等奖、3V3团队一等奖、5V5团队三等奖等多项荣誉</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">💰</div>
+                                <div class="achievement-text">
+                                    <strong>大三暑假自主创业</strong>
+                                    <p>青少年AI绘画课程，2月内获得数10万收入，展现出色的商业敏感度</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">CONTACT</span>
+                <h2 class="section-title">开启合作之旅</h2>
+                <p class="section-subtitle">探索AI产品的无限可能，共创商业价值</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Build Something Amazing</h3>
+                    <p>
+                        我相信AI技术能够改变世界，而产品是连接技术与用户的桥梁。
+                        如果您正在寻找一位能够将AI技术转化为商业价值的产品专家，
+                        我很乐意与您探讨合作的可能性。
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">magicalaci@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Phone</div>
+                                <div class="contact-value">189-3121-2098</div>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Location</div>
+                                <div class="contact-value">Shanghai, China</div>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Expected Salary</div>
+                                <div class="contact-value">25-35K</div>
+                            </div>
+                        </div>
+                        <div class="contact-method download-resume-section">
+                            <div class="contact-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Resume Download</div>
+                                <button class="contact-download-btn" onclick="downloadResume()">
+                                    <i class="fas fa-file-pdf"></i> 下载完整简历PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                        <div class="terminal-dots">
+                            <div class="code-dot dot-red"></div>
+                            <div class="code-dot dot-yellow"></div>
+                            <div class="code-dot dot-green"></div>
+                        </div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> whoami</span>
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            于鹤炜 - AI Product Manager
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> cat skills.txt</span>
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            [✓] LLM Fine-tuning
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            [✓] Agent Orchestration
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            [✓] Stable Diffusion
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            [✓] Vector Database
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            [✓] Product Strategy
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> echo $ACHIEVEMENTS</span>
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            Revenue: 1000万+ | Efficiency: +300% | Cost Saved: 650万+
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command"> git status</span>
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            Ready for new opportunities...
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command blinking-cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating AI Assistant -->
+    <div class="ai-assistant-floating" id="aiAssistantFloating">
+        <!-- Robot Button -->
+        <button class="robot-btn" id="robotBtn">
+            <i class="fas fa-robot"></i>
+            <span class="robot-pulse"></span>
+        </button>
+
+        <!-- Chat Modal -->
+        <div class="chat-modal" id="chatModal">
+
+            <div class="chat-modal-messages" id="chatModalMessages">
+                <div class="message ai-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>👋 您好！我是于鹤炜，有什么想了解的吗？</p>
+                        <p>您可以直接询问，或者点击页面上任意内容的"问问详情"按钮来了解更多！</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-questions-mini">
+                <button class="quick-btn-mini" onclick="sendQuickQuestion('介绍一下你的AI项目经验')">
+                    🚀 项目经验
+                </button>
+                <button class="quick-btn-mini" onclick="sendQuickQuestion('你的商业化成果如何？')">
+                    💰 商业成果
+                </button>
+                <button class="quick-btn-mini" onclick="sendQuickQuestion('如何联系你进行深入沟通？')">
+                    📞 联系方式
+                </button>
+            </div>
+
+            <div class="chat-modal-input">
+                <input type="text" id="chatModalInput" placeholder="输入您的问题..." maxlength="500">
+                <button id="sendModalBtn" class="send-modal-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ask Details Tooltip -->
+    <div class="ask-details-tooltip" id="askDetailsTooltip">
+        <button class="ask-details-btn" id="askDetailsBtn">
+            <i class="fas fa-question-circle"></i>
+            问问详情
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">YU.HEWEI</div>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">首页</a>
+                    <a href="#about" class="footer-link">关于</a>
+                    <a href="#projects" class="footer-link">项目</a>
+                    <a href="#education" class="footer-link">教育</a>
+                    <a href="#contact" class="footer-link">联系</a>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:magicalaci@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:18931212098" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    © 2025 Yu Hewei. Crafted with passion for the future of AI.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/ai-assistant.js"></script>
+</body>
+</html>
